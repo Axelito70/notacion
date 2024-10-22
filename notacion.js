@@ -1,18 +1,18 @@
 document.getElementById('NotacionPolaca').addEventListener('submit', function (event) {
     event.preventDefault();
-    const expresion = document.getElementById('expresion').value; // Obtener la expresión ingresada
+    const expresion = document.getElementById('expresion').value; 
 
-    // Validar si la expresión contiene letras o caracteres inválidos
+    
     if (/[^0-9\s+\-*/]/.test(expresion)) {
-        document.getElementById('error').style.display = 'block'; // Mostrar el error
-        document.getElementById('resultado').innerText = ''; // Limpiar el resultado
-        document.getElementById('polacaIngresada').innerText = ''; // Limpiar la notación polaca
-        return; // Salir si hay caracteres inválidos
+        document.getElementById('error').style.display = 'block'; 
+        document.getElementById('resultado').innerText = ''; 
+        document.getElementById('polacaIngresada').innerText = ''; 
+        return; 
     } else {
-        document.getElementById('error').style.display = 'none'; // Ocultar el error si no hay caracteres inválidos
+        document.getElementById('error').style.display = 'none'; 
     }
 
-    const [expresionNormal, resultado] = evaluarPolaca(expresion); // Evaluar la expresión en notación polaca
+    const [expresionNormal, resultado] = evaluarPolaca(expresion); 
 
     // Mostrar los resultados
     document.getElementById('resultado').innerText = `Expresión normal: ${expresionNormal}\nResultado: ${resultado}`;
