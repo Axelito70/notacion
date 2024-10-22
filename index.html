@@ -15,12 +15,17 @@
                     <div class="mb-3">
                         <label for="expresion" class="form-label">Ingresa la expresión en Notación Polaca</label>
                         <input type="text" class="form-control" id="expresion" placeholder="Ej: + 33 33 * 3" required>
+                        <div id="error" class="text-danger mt-2" style="display:none;">Error: La expresión contiene caracteres inválidos.</div>
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Convertir y Evaluar</button>
                 </form>
                 <div class="mt-4">
                     <h3>Resultado:</h3>
                     <p id="resultado" class="alert alert-secondary">La notación normal y el resultado aparecerán aquí.</p>
+                </div>
+                <div class="mt-4">
+                    <h3>Notación Polaca Ingresada:</h3>
+                    <p id="polacaIngresada" class="alert alert-info">La notación polaca ingresada aparecerá aquí.</p>
                 </div>
             </div>
         </div>
